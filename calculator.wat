@@ -606,7 +606,7 @@
   (export "is_even" (func 7))
   (export "close_to_int" (func 8))
   (export "am" (func 9))
-  (export "sqroot" (func 10))
+  (export "sq_root" (func 10))
   (export "gm" (func 11))
   (export "agm" (func 12))
   (export "ln" (func 13))

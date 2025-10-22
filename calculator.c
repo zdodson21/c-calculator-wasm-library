@@ -94,7 +94,7 @@ double am(double a, double b) {
 }
 
 EMSCRIPTEN_KEEPALIVE
-double sqroot(double radicand) {
+double sq_root(double radicand) {
   /*
    * Both return 0, but in reality < 0 would return a domain error
    * Returns 0 for safety, should be handled on front-end to prevent
@@ -125,7 +125,7 @@ double sqroot(double radicand) {
  */
 EMSCRIPTEN_KEEPALIVE
 double gm(double a, double b) {
-  return sqroot(multiply(a, b));
+  return sq_root(multiply(a, b));
 }
 
 /*
@@ -250,7 +250,7 @@ double root(double index, double radicand) {
   }
 
   if (index == 2) {
-    return sqroot(radicand);
+    return sq_root(radicand);
   }
 
   return exponent(radicand, divide(1, index));
