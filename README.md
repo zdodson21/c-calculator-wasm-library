@@ -66,6 +66,7 @@ This file is provided for convenience and is generated using the [WebAssembly](h
 
 ## Other
 
-- [Releases]()
+- [Releases](https://github.com/zdodson21/c-calculator-wasm-library/releases)
 - [License](https://github.com/zdodson21/c-calculator-wasm-library/blob/main/LICENSE)
 - [GitHub Repo](https://github.com/zdodson21/c-calculator-wasm-library)
+- [Original Project](https://github.com/zdodson21/retro-desktop-portfolio)
