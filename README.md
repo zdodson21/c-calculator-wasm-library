@@ -60,7 +60,7 @@ emcc -Os calculator.c -o calculator.wasm --no-entry
 
 ### `calculator.wat`
 
-This file is provided for convenience and is generated using the [WebAssembly](https://marketplace.visualstudio.com/items?itemName=dtsvet.vscode-wasm) [Visual Studio Code](https://code.visualstudio.com/) extension.
+This file is generated from a compiled version of calculator.wasm. It is provided so anyone can compile the .wasm file from it without the need for emscripten.
 
 ---
 
