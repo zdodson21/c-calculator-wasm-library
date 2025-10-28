@@ -59,7 +59,13 @@
     f64.const 0x0p+0 (;=0;)
     f64.ne
     select)
-  (func (;6;) (type 2) (param f64) (result i32)
+  (func (;6;) (type 0) (param f64 f64) (result f64)
+    local.get 0
+    local.get 1
+    f64.const 0x1.9p+6 (;=100;)
+    f64.div
+    f64.mul)
+  (func (;7;) (type 2) (param f64) (result i32)
     local.get 0
     local.get 0
     i64.trunc_sat_f64_s
@@ -68,7 +74,7 @@
     f64.abs
     f64.const 0x1.203af9ee75616p-50 (;=1e-15;)
     f64.lt)
-  (func (;7;) (type 2) (param f64) (result i32)
+  (func (;8;) (type 2) (param f64) (result i32)
     (local i32 i32)
     i32.const 1
     local.set 1
@@ -98,7 +104,7 @@
     local.get 1
     i32.const 1
     i32.and)
-  (func (;8;) (type 1) (param f64) (result f64)
+  (func (;9;) (type 1) (param f64) (result f64)
     f64.const 0x1p+0 (;=1;)
     f64.const 0x0p+0 (;=0;)
     local.get 0
@@ -110,13 +116,13 @@
     f64.const 0x1.a36e2eb1c432dp-14 (;=0.0001;)
     f64.lt
     select)
-  (func (;9;) (type 0) (param f64 f64) (result f64)
+  (func (;10;) (type 0) (param f64 f64) (result f64)
     local.get 0
     local.get 1
     f64.add
     f64.const 0x1p-1 (;=0.5;)
     f64.mul)
-  (func (;10;) (type 1) (param f64) (result f64)
+  (func (;11;) (type 1) (param f64) (result f64)
     (local f64 f64 i32)
     local.get 0
     f64.const 0x0p+0 (;=0;)
@@ -162,7 +168,7 @@
       end
     end
     local.get 1)
-  (func (;11;) (type 0) (param f64 f64) (result f64)
+  (func (;12;) (type 0) (param f64 f64) (result f64)
     (local f64 i32)
     local.get 0
     local.get 1
@@ -211,7 +217,7 @@
       end
     end
     local.get 2)
-  (func (;12;) (type 0) (param f64 f64) (result f64)
+  (func (;13;) (type 0) (param f64 f64) (result f64)
     (local f64 f64 f64 i32 i32)
     i32.const 1
     local.set 5
@@ -287,7 +293,7 @@
     f64.add
     f64.const 0x1p-1 (;=0.5;)
     f64.mul)
-  (func (;13;) (type 1) (param f64) (result f64)
+  (func (;14;) (type 1) (param f64) (result f64)
     (local f64)
     local.get 0
     f64.const 0x1p+0 (;=1;)
@@ -312,7 +318,7 @@
       f64.const 0x0p+0 (;=0;)
       f64.ne
       select
-      call 12
+      call 13
       local.tee 0
       local.get 0
       f64.add
@@ -338,7 +344,7 @@
       f64.lt
       select
     end)
-  (func (;14;) (type 0) (param f64 f64) (result f64)
+  (func (;15;) (type 0) (param f64 f64) (result f64)
     (local f64)
     local.get 1
     f64.const 0x1p+0 (;=1;)
@@ -359,9 +365,9 @@
       local.get 2
     else
       local.get 1
-      call 13
+      call 14
       local.get 0
-      call 13
+      call 14
       local.tee 0
       f64.div
       f64.const 0x0p+0 (;=0;)
@@ -370,7 +376,7 @@
       f64.ne
       select
     end)
-  (func (;15;) (type 0) (param f64 f64) (result f64)
+  (func (;16;) (type 0) (param f64 f64) (result f64)
     (local f64 f64 i32)
     block  ;; label = @1
       local.get 0
@@ -495,14 +501,14 @@
           return
         end
         local.get 0
-        call 13
+        call 14
         drop
       end
       local.get 0
       local.set 2
     end
     local.get 2)
-  (func (;16;) (type 0) (param f64 f64) (result f64)
+  (func (;17;) (type 0) (param f64 f64) (result f64)
     (local f64 i32 i32)
     i32.const 1
     local.set 4
@@ -606,14 +612,14 @@
       f64.const 0x0p+0 (;=0;)
       f64.ne
       select
-      call 15
+      call 16
       local.set 2
     end
     local.get 2)
-  (func (;17;) (type 4) (param i32)
+  (func (;18;) (type 4) (param i32)
     local.get 0
     global.set 0)
-  (func (;18;) (type 5) (result i32)
+  (func (;19;) (type 5) (result i32)
     global.get 0)
   (table (;0;) 2 2 funcref)
   (memory (;0;) 258 258)
@@ -624,19 +630,20 @@
   (export "multiply" (func 3))
   (export "divide" (func 4))
   (export "one_over" (func 5))
-  (export "is_whole_num" (func 6))
-  (export "is_even" (func 7))
-  (export "close_to_int" (func 8))
-  (export "am" (func 9))
-  (export "sq_root" (func 10))
-  (export "gm" (func 11))
-  (export "agm" (func 12))
-  (export "ln" (func 13))
-  (export "logarithm" (func 14))
-  (export "exponent" (func 15))
-  (export "root" (func 16))
+  (export "percent" (func 6))
+  (export "is_whole_num" (func 7))
+  (export "is_even" (func 8))
+  (export "close_to_int" (func 9))
+  (export "am" (func 10))
+  (export "sq_root" (func 11))
+  (export "gm" (func 12))
+  (export "agm" (func 13))
+  (export "ln" (func 14))
+  (export "logarithm" (func 15))
+  (export "exponent" (func 16))
+  (export "root" (func 17))
   (export "__indirect_function_table" (table 0))
   (export "_initialize" (func 0))
-  (export "_emscripten_stack_restore" (func 17))
-  (export "emscripten_stack_get_current" (func 18))
+  (export "_emscripten_stack_restore" (func 18))
+  (export "emscripten_stack_get_current" (func 19))
   (elem (;0;) (i32.const 1) func 0))
