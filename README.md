@@ -17,6 +17,8 @@ The following functions are provided:
 - `divide(a, b)` - Calculates the quotient of `a` divided by `b`
   
 - `one_over(a)` - Calculates the quotient of 1 divided by `a`
+
+- `percent(a, percent)` - Calculates the percent of value `a`
   
 - `is_whole_num(a)` - Returns whether or not `a` is a whole number
   
